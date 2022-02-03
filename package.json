@@ -1,0 +1,19 @@
+{
+  "name": "news-mailer",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@sendgrid/client": "^7.6.0",
+    "dotenv": "^14.3.0",
+    "newsapi": "^2.4.1",
+    "node-fetch": "^2.6.7",
+    "nodemailer": "^6.7.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {}
+}

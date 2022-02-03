@@ -1,0 +1,16 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 8 * * *"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "direction": "out",
+      "apiKey": "SendGridApiKey"
+    }
+  ]
+}
