@@ -10,9 +10,7 @@ module.exports = async function (context, req) {
 
     function pushData(email) {
         var value;
-
         let content = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
-
         if (content.users.filter(i => email.includes(i.email)).length > 0) {
             value = false;
         }
@@ -20,16 +18,13 @@ module.exports = async function (context, req) {
             content.users.push({ email: email });
             value = true;
         }
-
         fs.writeFileSync('./users.json', JSON.stringify(content));
-
         return value;
     }
 
     function writeMail(email) {
 
         var message ;
-
         if(pushData(email)){
             message = `Welcome to News Mailer ${email}, You will get your email at 8 AM everyday :)`
         }
@@ -37,7 +32,6 @@ module.exports = async function (context, req) {
             message = "You've already registered to this service"
         }
         context.log('Page loaded');
-
         return message;
     }
 
