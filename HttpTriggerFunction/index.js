@@ -1,6 +1,6 @@
 const fs = require('fs');
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+    //context.log('JavaScript HTTP trigger function processed a request.');
 
     //const name = (req.query.name || (req.body && req.body.name));
     const email = (req.query.email || (req.body && req.body.email));
@@ -23,7 +23,6 @@ module.exports = async function (context, req) {
     }
 
     function writeMail(email) {
-
         var message ;
         if(pushData(email)){
             message = `Welcome to News Mailer ${email}, You will get your email at 8 AM everyday :)`
